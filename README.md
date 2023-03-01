@@ -16,8 +16,6 @@
 
 #### 举例
 
-(这里images/s5968156.jpg)来自[豆瓣](https://img9.doubanio.com/view/subject/s/public/s5968156.jpg)
-
 ```
 {% book_card 神拳考 '止庵/华东师范大学出版社' '2023-2-27' 这本书还挺有意思的，讲了一些义和团相关的事和背后的深层动机。 images/神拳考.jpg %}
 ```
