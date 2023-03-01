@@ -18,7 +18,7 @@ function tagTemplate(book_name, author_name, read_time, short_comment, pic_path)
             </div>
             <div class="content-container">
                 <div class="book-name">${book_name}</div>
-                <div class="author-name">作者：${author_name}</div>
+                <div class="author-name">${author_name}</div>
                 <div class="read-time">${read_time}</div>
                 <div class="short-comment">${short_comment}</div>
             </div>
