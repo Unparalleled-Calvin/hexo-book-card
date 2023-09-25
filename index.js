@@ -1,4 +1,4 @@
-// 格式 {% book_card author_name read_time short_comment pic_path %}
+// 格式 {% book_card author_name read_time short_comment pic_path %} {=book_name{% post_link ...%}=}
 const log = require('hexo-log')({ 'debug': false, 'slient': false });
 const fs = require('hexo-fs');
 const path = require('path');
@@ -41,3 +41,9 @@ hexo.extend.injector.register('head_begin', () => {
     return '<meta name="referrer" content="no-referrer"/>'
 }, 'page')
 
+hexo.extend.filter.register('after_post_render', function(data){
+    var pattern = /<div class="book-name">(.*?)<\/div>(.*?){=\1<a.+?href=\"(.*?)\".*?>.*?<\/a>=}/gs;
+    data.content = data.content.replace(pattern, function(match, divCont, otherCont, href) {
+        return `<div class="book_name" onclick="window.location.href='${href}'" onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';" style="word-wrap: break-word; color: #5073b8; cursor: pointer;">${divCont}</div>${otherCont}`;
+    })
+})
