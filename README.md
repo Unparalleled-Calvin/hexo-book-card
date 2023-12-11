@@ -2,11 +2,11 @@
 
 在hexo page内生成含post link的读书卡片(也可用于电影等等类别的卡片)
 
+> 如果需要在post中使用可以自行修改本插件的index.js
+
 #### 使用步骤
 
 - 使用`hexo new page ...`创建一个新的页面
-
-  > 如果需要在posts中使用可以自行修改本插件的index.js
 
 - 在`index.md`中以如下格式使用本插件
 
