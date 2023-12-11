@@ -14,7 +14,7 @@ function tagTemplate(book_name, author_name, read_time, short_comment, pic_path)
     <div class="container">
         <div class="card">
             <div class="pic-container">
-                <img class="pic" src="${pic_path}">
+                <img class="pic" src="${pic_path}" loading="lazy">
             </div>
             <div class="content-container">
                 <div class="book-name">${book_name}</div>
